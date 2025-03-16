@@ -1,7 +1,12 @@
+import Header from './components/Header';
+import Main from './components/Main';
+
 export default function App() {
   return (
     <>
-      <h1 className="text-2xl m-32M font-fraunces">Hello</h1>
+      <Header />
+
+      <Main />
     </>
   );
 }

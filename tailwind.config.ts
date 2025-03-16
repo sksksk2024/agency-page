@@ -133,6 +133,7 @@ module.exports = {
         'dark-grayish-blue': 'var(--dark-grayish-blue)',
         'grayish-blue': 'var(--grayish-blue)',
         border: {
+          yellow: 'var(--yellow)',
           cyan: 'var(--cyan)',
           'light-grayish-blue': 'var(--light-grayish-blue)',
           'grayish-blue': 'var(--grayish-blue)',

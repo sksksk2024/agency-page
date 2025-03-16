@@ -66,6 +66,44 @@ body {
   user-select: none;
 }
 
+header {
+  width: 100dvw;
+  height: 100dvh;
+  background-image: url('./images/mobile/image-header.jpg');
+  background-position: center;
+  background-size: 100dvw 100dvh;
+  background-repeat: no-repeat;
+
+  @media (min-width: 64em) {
+    background-image: url('./images/desktop/image-header.jpg');
+  }
+}
+
+/* MAIN */
+#cherry,
+#mini-orange {
+  width: 100dvw;
+  height: 60dvh;
+  background-position: start;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#cherry {
+  background-image: url('./images/desktop/image-graphic-design.jpg');
+}
+
+#mini-orange {
+  background-image: url('./images/desktop/image-photography.jpg');
+}
+
+h1,
+h2,
+a,
+#contact {
+  @apply font-fraunces;
+}
+
 #link-shortener {
   background-image: url('./images/bg-boost-mobile.svg');
   background-color: var(--dark-violet);
