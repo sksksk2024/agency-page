@@ -91,73 +91,59 @@ export default function Main() {
         </div>
       </section>
 
-      {/* SECTION 4 */}
       <section className="flex flex-col justify-center items-center bg-white px-16P">
         <h3 className="text-xl text-center text-grayish-blue font-bold my-64M tracking-widest uppercase">
           Client testimonials
         </h3>
 
         <div className="flex flex-col justify-center items-center gap-12 px-32P mb-48M xl:flex-row xl:items-start">
-          {/* 1 */}
-          <div className="flex flex-col justify-center items-center gap-10 mb-48M xl:my-0">
-            <img src={pers1} className="rounded-full w-96W" alt="emily" />
-            <p className="text-xl text-center text-dark-grayish-blue font-semibold max-w-container-500">
-              We put our trust in Sunnyside and they delivered, making sure our
-              needs were met and deadlines were always hit.
-            </p>
-            <div className="text-center">
-              <h4 className="text-xl text-black font-bold">Emily R.</h4>
-              <p className="text-grayish-blue">Marketing Director</p>
+          {[
+            {
+              img: pers1,
+              name: 'Emily R.',
+              role: 'Marketing Director',
+              text: 'We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.',
+            },
+            {
+              img: pers2,
+              name: 'Thomas S.',
+              role: 'Chief Operating Officer',
+              text: 'Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.',
+            },
+            {
+              img: pers3,
+              name: 'Jennie F.',
+              role: 'Business Owner',
+              text: 'Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!',
+            },
+          ].map(({ img, name, role, text }, index) => (
+            <div
+              key={index}
+              className="flex flex-col justify-center items-center gap-10 my-48M xl:my-0"
+            >
+              <img src={img} className="rounded-full w-96W" alt={name} />
+              <p className="text-xl text-center text-dark-grayish-blue font-semibold max-w-container-500">
+                {text}
+              </p>
+              <div className="text-center">
+                <h4 className="text-xl text-black font-bold">{name}</h4>
+                <p className="text-grayish-blue">{role}</p>
+              </div>
             </div>
-          </div>
-
-          {/* 2 */}
-          <div className="flex flex-col justify-center items-center gap-10 my-48M xl:my-0">
-            <img src={pers2} className="rounded-full w-96W" alt="thomas" />
-            <p className="text-xl text-center text-dark-grayish-blue font-semibold max-w-container-500">
-              Sunnyside’s enthusiasm coupled with their keen interest in our
-              brand’s success made it a satisfying and enjoyable experience.
-            </p>
-            <div className="text-center">
-              <h4 className="text-xl text-black font-bold">Thomas S.</h4>
-              <p className="text-grayish-blue">Chief Operating Officer</p>
-            </div>
-          </div>
-
-          {/* 3 */}
-          <div className="flex flex-col justify-center items-center gap-10 my-48M xl:my-0">
-            <img src={pers3} className="rounded-full w-96W" alt="jennie" />
-            <p className="text-xl text-center text-dark-grayish-blue font-semibold max-w-container-500">
-              Incredible end result! Our sales increased over 400% when we
-              worked with Sunnyside. Highly recommended!
-            </p>
-            <div className="text-center">
-              <h4 className="text-xl text-black font-bold">Jennie F.</h4>
-              <p className="text-grayish-blue">Business Owner</p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* SECTION 5 */}
-      <section className="flex flex-col justify-center items-center bg-white xl:flex-row">
-        <div className="flex flex-col justify-center items-center w-full sm:h-[550.4px] sm:flex-row">
-          <img src={milk} className="w-full h-[550.4px] sm:w-1/2" alt="milk" />
+      {/* SECTION 5 - Gallery */}
+      <section className="grid grid-cols-2 md:grid-cols-4">
+        {[milk, orange, cone, sugar].map((img, index) => (
           <img
-            src={orange}
-            className="w-full h-[550.4px] sm:w-1/2"
-            alt="orange"
+            key={index}
+            src={img}
+            className="w-full h-full object-cover"
+            alt="gallery"
           />
-        </div>
-
-        <div className="flex flex-col justify-center items-center w-full sm:h-[550.4px] sm:flex-row">
-          <img src={cone} className="w-full h-[550.4px] sm:w-1/2" alt="cone" />
-          <img
-            src={sugar}
-            className="w-full h-[550.4px] sm:w-1/2"
-            alt="sugar"
-          />
-        </div>
+        ))}
       </section>
     </main>
   );
