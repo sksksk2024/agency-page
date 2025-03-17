@@ -1,7 +1,12 @@
 import eggs from './../images/mobile/image-transform.jpg';
-import orange from './../images/mobile/image-stand-out.jpg';
-// import orange from './../images/mobile/image-photography.jpg';
-// import orangeD from './../images/desktop/image-photography.jpg';
+import miniOrange from './../images/mobile/image-stand-out.jpg';
+import milk from './../images/mobile/image-gallery-milkbottles.jpg';
+import sugar from './../images/mobile/image-gallery-sugar-cubes.jpg';
+import cone from './../images/mobile/image-gallery-cone.jpg';
+import orange from './../images/desktop/image-gallery-orange.jpg';
+import pers1 from './../images/image-emily.jpg';
+import pers2 from './../images/image-thomas.jpg';
+import pers3 from './../images/image-jennie.jpg';
 
 export default function Main() {
   return (
@@ -30,7 +35,7 @@ export default function Main() {
 
       {/* SECTION 2 */}
       <section className="flex flex-col justify-center items-center md:flex-row">
-        <img src={orange} className="w-full" alt="egg" />
+        <img src={miniOrange} className="w-full" alt="mini-orange" />
         <aside className="w-full flex flex-col justify-center items-center gap-8 bg-white text-black text-center md:py-[221px] md:text-start">
           <h2 className="text-lg font-bold md:text-2xl w-1/2">
             Stand out to the right audience
@@ -78,6 +83,75 @@ export default function Main() {
             underscores your brand message and captures potential clients’
             attention.
           </p>
+        </div>
+      </section>
+
+      {/* SECTION 4 */}
+      <section className="flex flex-col justify-center items-center bg-white px-16P">
+        <h3 className="text-xl text-center text-grayish-blue font-bold my-64M tracking-widest uppercase">
+          Client testimonials
+        </h3>
+
+        <div className="flex flex-col justify-center items-center gap-12 px-32P mb-48M xl:flex-row xl:items-start">
+          {/* 1 */}
+          <div className="flex flex-col justify-center items-center gap-10 mb-48M xl:my-0">
+            <img src={pers1} className="rounded-full w-96W" alt="emily" />
+            <p className="text-xl text-center text-dark-grayish-blue font-semibold max-w-container-500">
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+            <div className="text-center">
+              <h4 className="text-xl text-black font-bold">Emily R.</h4>
+              <p className="text-grayish-blue">Marketing Director</p>
+            </div>
+          </div>
+
+          {/* 2 */}
+          <div className="flex flex-col justify-center items-center gap-10 my-48M xl:my-0">
+            <img src={pers2} className="rounded-full w-96W" alt="thomas" />
+            <p className="text-xl text-center text-dark-grayish-blue font-semibold max-w-container-500">
+              Sunnyside’s enthusiasm coupled with their keen interest in our
+              brand’s success made it a satisfying and enjoyable experience.
+            </p>
+            <div className="text-center">
+              <h4 className="text-xl text-black font-bold">Thomas S.</h4>
+              <p className="text-grayish-blue">Chief Operating Officer</p>
+            </div>
+          </div>
+
+          {/* 3 */}
+          <div className="flex flex-col justify-center items-center gap-10 my-48M xl:my-0">
+            <img src={pers3} className="rounded-full w-96W" alt="jennie" />
+            <p className="text-xl text-center text-dark-grayish-blue font-semibold max-w-container-500">
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </p>
+            <div className="text-center">
+              <h4 className="text-xl text-black font-bold">Jennie F.</h4>
+              <p className="text-grayish-blue">Business Owner</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5 */}
+      <section className="flex flex-col justify-center items-center bg-white xl:flex-row">
+        <div className="flex flex-col justify-center items-center w-full h-[550.4px] sm:flex-row">
+          <img src={milk} className="w-full h-[550.4px] sm:w-1/2" alt="milk" />
+          <img
+            src={orange}
+            className="w-full h-[550.4px] sm:w-1/2"
+            alt="orange"
+          />
+        </div>
+
+        <div className="flex flex-col justify-center items-center w-full h-[550.4px] sm:flex-row">
+          <img src={cone} className="w-full h-[550.4px] sm:w-1/2" alt="cone" />
+          <img
+            src={sugar}
+            className="w-full h-[550.4px] sm:w-1/2"
+            alt="sugar"
+          />
         </div>
       </section>
     </main>
