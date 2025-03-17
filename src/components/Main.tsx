@@ -1,5 +1,5 @@
 import eggs from './../images/mobile/image-transform.jpg';
-import miniOrange from './../images/mobile/image-stand-out.jpg';
+import cup from './../images/mobile/image-stand-out.jpg';
 import milk from './../images/mobile/image-gallery-milkbottles.jpg';
 import sugar from './../images/mobile/image-gallery-sugar-cubes.jpg';
 import cone from './../images/mobile/image-gallery-cone.jpg';
@@ -12,9 +12,12 @@ export default function Main() {
   return (
     <main className="">
       {/* SECTION 1 */}
-      <section className="flex flex-col justify-center items-center md:flex-row-reverse">
-        <img src={eggs} className="w-full" alt="egg" />
-        <aside className="w-full flex flex-col justify-center items-center gap-8 bg-white text-black text-center md:py-[242px] md:text-start">
+      <section className="flex flex-col justify-center items-center h-[620px] mt-[310px] lg:mt-0 lg:flex-row-reverse">
+        <div className="w-full h-[620px]">
+          <img src={eggs} className="w-full h-[620px]" alt="egg" />
+        </div>
+
+        <aside className="z-0 w-full h-[620px] flex flex-col justify-center items-center gap-8 bg-white text-black text-center md:text-start py-[300px]">
           <h2 className="text-lg font-bold md:text-2xl w-1/2">
             Transform your brand
           </h2>
@@ -34,9 +37,11 @@ export default function Main() {
       </section>
 
       {/* SECTION 2 */}
-      <section className="flex flex-col justify-center items-center md:flex-row">
-        <img src={miniOrange} className="w-full" alt="mini-orange" />
-        <aside className="w-full flex flex-col justify-center items-center gap-8 bg-white text-black text-center md:py-[221px] md:text-start">
+      <section className="flex flex-col justify-center items-center lg:flex-row mt-[285px] lg:mt-0">
+        <div className="relative w-full h-[622px]">
+          <img src={cup} className="z-0 w-full h-[622px]" alt="cup" />
+        </div>
+        <aside className="z-0 w-full h-[622px] flex flex-col justify-center items-center gap-8 bg-white text-black text-center md:text-start">
           <h2 className="text-lg font-bold md:text-2xl w-1/2">
             Stand out to the right audience
           </h2>
@@ -55,17 +60,17 @@ export default function Main() {
         </aside>
       </section>
 
-      {/* SECTION 3 */}
+      {/* SECTION 3 - h-[496px] !!!!!!!!!!!!!!!!!!!*/}
       <section className="flex flex-col justify-center items-center md:flex-row">
         <div
           id="cherry"
-          className="flex flex-col justify-end items-center text-center space-y-8 pb-48P"
+          className="flex flex-col justify-end items-center text-center space-y-8 pb-32P px-32P"
         >
           <h3 className="text-dark-desaturated-cyan text-xl font-bold">
             Graphic Design
           </h3>
 
-          <p className="text-dark-moderate-cyan max-w-container-400">
+          <p className="text-dark-moderate-cyan font-semibold max-w-container-400">
             Great design makes you memorable. We deliver artwork that
             underscores your brand message and captures potential clients’
             attention.
@@ -74,7 +79,7 @@ export default function Main() {
 
         <div
           id="mini-orange"
-          className="flex flex-col justify-end items-center text-center space-y-8 pb-48P"
+          className="flex flex-col justify-end items-center text-center space-y-8 pb-32P px-32P"
         >
           <h3 className="text-dark-blue text-xl font-bold">Graphic Design</h3>
 
@@ -136,7 +141,7 @@ export default function Main() {
 
       {/* SECTION 5 */}
       <section className="flex flex-col justify-center items-center bg-white xl:flex-row">
-        <div className="flex flex-col justify-center items-center w-full h-[550.4px] sm:flex-row">
+        <div className="flex flex-col justify-center items-center w-full sm:h-[550.4px] sm:flex-row">
           <img src={milk} className="w-full h-[550.4px] sm:w-1/2" alt="milk" />
           <img
             src={orange}
@@ -145,7 +150,7 @@ export default function Main() {
           />
         </div>
 
-        <div className="flex flex-col justify-center items-center w-full h-[550.4px] sm:flex-row">
+        <div className="flex flex-col justify-center items-center w-full sm:h-[550.4px] sm:flex-row">
           <img src={cone} className="w-full h-[550.4px] sm:w-1/2" alt="cone" />
           <img
             src={sugar}
